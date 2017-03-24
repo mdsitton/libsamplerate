@@ -99,7 +99,6 @@ configure_file(${PROJECT_SOURCE_DIR}/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/con
 add_library(samplerate ${SAMPLERATE_SRC})
 
 if(WIN32)
-	target_compile_definitions(samplerate PRIVATE "WIN32" "_USRDLL")
 	target_include_directories(samplerate PUBLIC ${PROJECT_SOURCE_DIR}/Win32)
 endif()
 
